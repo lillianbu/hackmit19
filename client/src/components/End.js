@@ -1,8 +1,7 @@
 import React from "react";
 import "../css/app.css";
-import Home from "./Home";
 
-class App extends React.Component {
+class End extends React.Component {
 	constructor(props) {
 		super(props)
 	}
@@ -10,10 +9,10 @@ class App extends React.Component {
 	render() {
 		return (
 			<div>
-				<Home/>
+				This is end.js
 			</div>
 		);
 	}
 }
 
-export default App;
+export default End;
