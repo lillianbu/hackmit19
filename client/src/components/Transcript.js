@@ -37,8 +37,8 @@ class Transcript extends React.Component {
 		  // 	text = text.concat(this.state.selectedSentences[i]);
 		  // }
 		  console.log(text);
-		  element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent("title\n" + text));
-		  element.setAttribute('download', "title");
+		  element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent("lecture_notes\n" + text));
+		  element.setAttribute('download', "lecture_notes");
 
 		  element.style.display = 'none';
 		  document.body.appendChild(element);

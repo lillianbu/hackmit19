@@ -11,19 +11,22 @@ class Home extends React.Component {
 		super(props)
 
 		this.state = {
-			recordStart: true,
+			recordStart: false,
 			meetingTitle: "",
 		}
 	}
+
+	navigate = (event) => {
+		this.setState({recordStart: true});
+	}
+
 	render() {
 		return (
 			<div>
 			<Navbar/>
 				<div className="home-container">
-					<form action="http://localhost:3000/record" method="post">
-					     Meeting Title: <input type="text" name="title" />
-					     <button className="record-button"><img src={RecordButton} onClick={this.myfunction} /></button>
-					 </form>
+					     Meeting Title: <input type="text" name="title" className="form-border" />
+					     <button className="record-button"><img src={RecordButton} onClick={this.navigate} /></button>
 					<Instruction/>
 					<RecordContainer recordStart={this.state.recordStart}/>
 				</div>

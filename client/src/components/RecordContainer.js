@@ -16,6 +16,17 @@ class RecordContainer extends React.Component {
 		}
 	}
 
+	componentDidMount() {
+		if (this.state.recordStatus == 0) {
+			setTimeout(function() { //Start the timer
+		        this.setState({recordStatus: 1}) //After 1 second, set render to true
+		    }.bind(this), 5000)
+	  	}
+	}
+	componentWillUnmount() {
+	  clearInterval(this.interval);
+	}
+
 	render() {
 		switch(this.props.recordStart) {
 			case true:

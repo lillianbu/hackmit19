@@ -6,16 +6,10 @@ class Record extends React.Component {
 		super(props)
 	}
 
-	componentDidMount() {
-      fetch('/record')
-        .then(res => res.json())
-        .then(users => this.setState({ users }));
-    }
-
 	render() {
 		return (
 			<div>
-				This is record.js
+				RECORDING...
 			</div>
 		);
 	}
