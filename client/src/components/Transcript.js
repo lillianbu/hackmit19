@@ -31,7 +31,7 @@ class Transcript extends React.Component {
 				  <Highlighter
 				    searchWords={this.state.words}
 				    autoEscape={true}
-				    textToHighlight="The dog is chasing the cat. Or perhaps they're just playing? Where is the dog?"
+				    textToHighlight={this.props.transcript}
 				  />
 				</div>
 			</div>
