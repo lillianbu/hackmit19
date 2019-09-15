@@ -29,7 +29,25 @@ module.exports = {
             loader: 'css-loader',
           }
         ]
+      },
+      {
+<<<<<<< HEAD
+        test: /\.(pdf|jpg|png|gif|svg|ico)$/i,
+        use: [
+          {
+            loader: 'url-loader'
+          },
+        ]
+      },
+=======
+        test: /\.(png|svg|jpg|gif)$/i,
+        use: [
+          {
+            loader: 'url-loader?limit=100000'
+          }
+        ]
       }
+>>>>>>> aa970c322be692456f61e5c3c597b2e355c1a2b7
     ]
   },
   plugins: [
