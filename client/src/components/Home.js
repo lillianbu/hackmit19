@@ -3,6 +3,7 @@ import "../css/app.css";
 import Instruction from "./Instruction";
 import RecordContainer from "./RecordContainer";
 import RecordButton from '../css/record_button.png';
+import Iroh from '../humana.png';
 
 class Home extends React.Component {
 	constructor(props) {
@@ -13,14 +14,12 @@ class Home extends React.Component {
 			meetingTitle: "",
 		}
 	}
-
 	render() {
 		return (
 			<div>
-				This is home.js
-				<form method='POST' action='/record'>
-				     <input type='text' placeholder='Enter meeting title..' name='title'/>
-				     <button className="record-button"><img src={RecordButton} onClick={this.myfunction} /></button>
+				<form>
+				     <input className="center-textbox" type='text' placeholder='Enter meeting title..' name='title'/>
+				     <button className="record-button"><img src={RecordButton} onClick={this.toggleImage} /></button>
 				  </form>
 				<Instruction/>
 				<RecordContainer recordStart={this.state.recordStart}/>
