@@ -1,7 +1,8 @@
 import React from "react";
 import "../css/app.css";
+import Button from '@material-ui/core/Button';
 
-class Button extends React.Component {
+class OffButton extends React.Component {
 	constructor(props) {
 		super(props)
 	}
@@ -9,10 +10,10 @@ class Button extends React.Component {
 	render() {
 		return (
 			<div>
-				This is button.js
+				<Button>button</Button>
 			</div>
 		);
 	}
 }
 
-export default Button;
+export default OffButton;
