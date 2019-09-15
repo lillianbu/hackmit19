@@ -10,7 +10,7 @@ class RecordContainer extends React.Component {
 		super(props);
 
 		this.state = {
-			recordStatus: 0, //0 is recording, 1 is result, 2 is end
+			recordStatus: 1, //0 is recording, 1 is result, 2 is end
 		}
 	}
 
