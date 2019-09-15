@@ -6,10 +6,14 @@ const app = express();
 const http = require("http").Server(app);
 const io = require("socket.io")(http);
 
+//require('./routes')(app);
+
 const publicPath = path.resolve(__dirname, "..", "client", "dist");
 
 app.use("/api", api );
 app.use(express.static(publicPath));
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
 http.listen(3000, () => {
 	console.log(`Listening on port 3000 and looking in folder ${publicPath}`);
@@ -45,7 +49,7 @@ app.get('/getText', async (request, response) => {
 })
 
 app.get('/record', (request, response) => {
-	response.send("record triggered");
+	response.send(request);
 })
 
 

@@ -2,7 +2,7 @@ import React from "react";
 import "../css/app.css";
 import Instruction from "./Instruction";
 import RecordContainer from "./RecordContainer";
-import Logo from "./Logo";
+import RecordButton from '../css/record_button.png';
 
 class Home extends React.Component {
 	constructor(props) {
@@ -10,6 +10,7 @@ class Home extends React.Component {
 
 		this.state = {
 			recordStart: true,
+			meetingTitle: "",
 		}
 	}
 
@@ -17,6 +18,10 @@ class Home extends React.Component {
 		return (
 			<div>
 				This is home.js
+				<form method='POST' action='/record'>
+				     <input type='text' placeholder='Enter meeting title..' name='title'/>
+				     <button className="record-button"><img src={RecordButton} onClick={this.myfunction} /></button>
+				  </form>
 				<Instruction/>
 				<Logo/>
 				<RecordContainer recordStart={this.state.recordStart}/>
