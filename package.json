@@ -15,6 +15,7 @@
   "license": "ISC",
   "dependencies": {
     "@material-ui/core": "^4.4.2",
+    "@react-pdf/renderer": "^1.6.4",
     "body-parser": "^1.18.3",
     "connect-ensure-login": "^0.1.1",
     "dotenv": "^6.2.0",
@@ -22,9 +23,11 @@
     "express": "^4.16.4",
     "express-session": "^1.15.6",
     "file-loader": "^4.2.0",
+    "getusermedia": "^2.0.1",
     "isomorphic-fetch": "^2.2.1",
     "jquery": "^3.3.1",
     "mongoose": "^5.4.4",
+    "navigator": "^1.0.1",
     "node": "^11.7.0",
     "passport": "^0.4.0",
     "passport-google-oauth20": "^1.0.0",
@@ -32,11 +35,15 @@
     "react-dom": "^16.7.0",
     "react-highlight-words": "^0.16.0",
     "react-highlighter": "^0.4.3",
+    "react-pdfmake": "^0.2.0",
     "react-router-dom": "^4.3.1",
     "revai-node-sdk": "^2.1.0",
     "socket.io": "^2.2.0",
     "socket.io-client": "^2.2.0",
-    "underscore": "^1.9.1"
+    "underscore": "^1.9.1",
+    "web-midi-api": "^2.0.6",
+    "webrtc-adapter": "^7.3.0",
+    "window": "^4.2.6"
   },
   "devDependencies": {
     "@babel/preset-react": "^7.0.0",

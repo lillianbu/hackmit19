@@ -41,3 +41,22 @@
     max-width:50%;
   	max-height:50%;
 }
+
+.download-button {
+	background-color: #65adad;
+	border-color: #3ba5a5;
+	margin-top: 20px;
+	height: 30px;
+	border-radius: 10px;
+}
+
+.logo {
+	background-color: #3ba5a5;
+	margin-top: -10px;
+	margin-left: -10px;
+	padding-top: 10px;
+	padding-bottom: 5px;
+	padding-left: 10px;
+	height: 50px;
+	width: 3000px;
+}

@@ -3,6 +3,7 @@ import "../css/app.css";
 import Instruction from "./Instruction";
 import RecordContainer from "./RecordContainer";
 import RecordButton from '../css/record_button.png';
+import Navbar from './Navbar';
 
 class Home extends React.Component {
 	constructor(props) {
@@ -17,6 +18,7 @@ class Home extends React.Component {
 	render() {
 		return (
 			<div>
+				<Navbar/>
 				This is home.js
 				<form method='POST' action='/record'>
 				     <input type='text' placeholder='Enter meeting title..' name='title'/>

@@ -2,6 +2,8 @@ import React from "react";
 import ReactDOM from "react-dom";
 import Highlighter from "react-highlight-words";
 import "../css/app.css";
+import ReactPDF from '@react-pdf/renderer';
+import MyDocument from './MyDocument';
 var Highlight = require('react-highlighter');
 
 class Transcript extends React.Component {
@@ -25,6 +27,26 @@ class Transcript extends React.Component {
 		this.setState({selectedSentences: newSelectedSentences})
 		console.log(this.state.selectedSentences);
 	};
+
+	handleDownload = () => {
+		  var element = document.createElement('a');
+		  var text = this.state.selectedSentences.join("\n\u2022");
+		  console.log("here");
+		  // console.log(this.state.selectedSentences);
+		  // for (var i = 0; i < this.state.selectedSentences; i++) {
+		  // 	text = text.concat(this.state.selectedSentences[i]);
+		  // }
+		  console.log(text);
+		  element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent("title\n" + text));
+		  element.setAttribute('download', "title");
+
+		  element.style.display = 'none';
+		  document.body.appendChild(element);
+
+		  element.click();
+
+		  document.body.removeChild(element);
+	}
 
 	render() {
 		let sentences = [];
@@ -54,6 +76,7 @@ class Transcript extends React.Component {
 				<div className="textbox">
 				  {sentences}
 				</div>
+				<button className="download-button" onClick={this.handleDownload}> Download </button>
 			</div>
 		);
 	}
