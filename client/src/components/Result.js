@@ -1,5 +1,6 @@
 import React from "react";
 import "../css/app.css";
+import Transcript from "./Transcript";
 
 class Result extends React.Component {
 	constructor(props) {
@@ -10,6 +11,9 @@ class Result extends React.Component {
 		return (
 			<div>
 				This is result.js
+				<div className="transcript-container">
+				<Transcript/>
+				</div>
 			</div>
 		);
 	}
