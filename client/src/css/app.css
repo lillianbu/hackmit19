@@ -8,12 +8,24 @@
 	border-color: #3ba5a5;
 	border-radius: 5px;
 	width: 1000px;
-	text-align: center;
+	text-align: left;
 	margin: 0 auto;
+	line-height: 2;
 }
 
+.bold {
+	font-style: bold;
+}
+
+.pad {
+	padding-top: 20px
+}
 .highlight {
-  background-color: yellow;
+  background-color: #3ba5a5;
+}
+
+body {
+	font-family: "Helvetica"
 }
 
 .input-box {
@@ -71,9 +83,9 @@
 }
 
 .center-textbox {
-  	margin: 0 auto;
-  	width: 250px;
   	text-align: center;
+  	padding-left: 10px;
+  	padding-right: 10px;
 }
 
 .home-container {
