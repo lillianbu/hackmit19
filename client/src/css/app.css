@@ -25,19 +25,55 @@
 	height: 30px;
 	width: 500px;
 	margin-bottom: 20px;
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .record-button {
 	position: relative;
     background-color: white;
-    border-color: white;
     line-height: 1;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 500px;
+    border-radius: 100px;
     text-decoration-line: none;
     transition: background-color 0.2s;
-    max-width:50%;
-  	max-height:50%;
+  	max-width:0%;
+  	max-height:0%;
+  	width: 50%;
+  	margin-left: auto;
+  	margin-right: auto;
+  	border-color: white;
+  	border-width: 0px;
+}
+
+.download-button {
+	background-color: #65adad;
+	border-color: #3ba5a5;
+	margin-top: 20px;
+	height: 30px;
+	border-radius: 10px;
+}
+
+.logo {
+	background-color: #3ba5a5;
+	margin-top: -10px;
+	margin-left: -10px;
+	padding-top: 10px;
+	padding-bottom: 5px;
+	padding-left: 10px;
+	height: 50px;
+	width: 3000px;
+}
+
+.center-textbox {
+  	margin: 0 auto;
+  	width: 250px;
+  	text-align: center;
+}
+
+.home-container {
+	text-align: center;
 }

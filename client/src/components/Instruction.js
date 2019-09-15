@@ -8,8 +8,8 @@ class Instruction extends React.Component {
 
 	render() {
 		return (
-			<div>
-				This is Instruction.js
+			<div className="transcript-container">
+				This is where the instructions would go. 
 			</div>
 		);
 	}

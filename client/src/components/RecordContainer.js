@@ -44,21 +44,18 @@ class RecordContainer extends React.Component {
 					case 0:
 						return (
 							<div>
-							<OnButton/>
 							<Record recordStatus={this.state.recordStatus}/>
 							</div>
 						);
 					case 1:
 						return (
 							<div>
-							<OnButton/>
 							<Result transcript={this.state.transcript}/>
 							</div>
 						);
 					case 2:
 						return (
 							<div>
-							<OnButton/>
 							<End/>
 							</div>
 						);
@@ -66,7 +63,6 @@ class RecordContainer extends React.Component {
 			case false:
 				return (
 					<div>
-					<OffButton/>
 					</div>
 				);
 		}

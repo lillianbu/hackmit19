@@ -20,7 +20,7 @@ app.use(express.urlencoded());
 app.use(express.json());
 
 http.listen(3000, () => {
-	console.log(`Listening on port 3000 and looking in folder ${publicPath}`);
+	console.log("Listening on port 3000 and looking in folder ${publicPath}");
 });
 
 const { RevAiApiClient } = require('revai-node-sdk');
