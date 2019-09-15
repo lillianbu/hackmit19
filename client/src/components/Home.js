@@ -17,11 +17,10 @@ class Home extends React.Component {
 	render() {
 		return (
 			<div>
-				This is home.js
-				<form method='POST' action='/record'>
-				     <input type='text' placeholder='Enter meeting title..' name='title'/>
+				<form action="http://localhost:3000/record" method="post">
+				     Meeting Title: <input type="text" name="title" />
 				     <button className="record-button"><img src={RecordButton} onClick={this.myfunction} /></button>
-				  </form>
+				 </form>
 				<Instruction/>
 				<RecordContainer recordStart={this.state.recordStart}/>
 			</div>

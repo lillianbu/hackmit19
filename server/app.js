@@ -15,8 +15,8 @@ app.use("/api", api );
 //app.use(express.static(publicPath));
 //app.use(express.urlencoded({ extended: true }));
 //app.use(express.json());
-//app.use(express.static(publicPath));
-app.use(express.urlencoded({ extended: true }));
+app.use(express.static(publicPath));
+app.use(express.urlencoded());
 app.use(express.json());
 
 http.listen(3000, () => {
@@ -28,25 +28,13 @@ var accessToken = "02iwmNeyKMeo1GUBcrjQUJxBTHJA14Z83bq1ISFR_i_slryM-xwKOTvKUmLxl
 var client = new RevAiApiClient(accessToken);
 var in_progress = 0;
 var musicPath = __dirname;
-// navigator.mediaDevices.getUserMedia({audio:true}).then(stream => {handlerFunction(stream)})
-// var job = await client.submitJobLocalFile("./audio/test_file.mp3");
-// var transcriptText = await client.getTranscriptText(job.id);
-// console.log(transcriptText)
-app.get('/processText', async (request, response) => {
-	// "/Users/Sayan/Desktop/hackmit19/hackmit19/server/audio/test_file.mp3"
-	console.log(musicPath);
-	if (in_progress == 0) {
-		// var job = await client.submitJobLocalFile(path);
-		in_progress = 1;
-		response.send('Processing audio...');
-	}
-})
+var fileTitle;
 
 app.get('/getText', async (request, response) => {
 	var jobs = await client.getListOfJobs();
-	var jobDetails = await client.getJobDetails(jobs[0].id);
+	var jobDetails = await client.getJobDetails(jobs[3].id);
 	console.log(jobs);
-	console.log(jobs[0].id);
+	console.log(jobs[3].id);
 	if (jobDetails.status != "transcribed") { 
 		response.send('Currently transcribing.');
 	} else {
@@ -56,20 +44,17 @@ app.get('/getText', async (request, response) => {
 	}
 })
 
-app.post('/record', (request, response) => {
-	// response.send("record triggered");
+app.post('/record', async (request, response) => {
 	const title = request.body.title;
+	fileTitle = title;
 	musicPath = __dirname.concat("/audio/", title, ".mp3");
+	var job = await client.submitJobLocalFile(musicPath);
 	console.log(title);
-	// rec.start();
-})
-
-app.get('/stopRecord', (request, response) => {
-	response.send("record ended");
-	rec.stop();
 })
 
 /*
+navigator.mediaDevices.getUserMedia({audio:true}).then(stream => {handlerFunction(stream)})
+
 function handlerFunction(stream) {
     rec = new MediaRecorder(stream);
     rec.ondataavailable = e => {
@@ -83,5 +68,3 @@ function handlerFunction(stream) {
     	}
     }
 }*/
-
-
