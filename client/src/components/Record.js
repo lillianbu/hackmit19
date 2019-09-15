@@ -8,7 +8,7 @@ class Record extends React.Component {
 
 	render() {
 		return (
-			<div>
+			<div className="bold">
 				RECORDING...
 			</div>
 		);
