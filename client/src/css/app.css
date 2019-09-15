@@ -1,0 +1,28 @@
+.transcript-container{
+	text-align: center;
+}
+
+.textbox{
+	border: 2px;
+	border-style: solid;
+	border-color: #3ba5a5;
+	border-radius: 5px;
+	width: 1000px;
+	text-align: center;
+	margin: 0 auto;
+}
+
+.highlight {
+  background-color: yellow;
+}
+
+.input-box {
+	border: 2px;
+	border-style: solid;
+	border-color: #3ba5a5;
+	text-align: center;
+	border-radius: 10px;
+	height: 30px;
+	width: 500px;
+	margin-bottom: 20px;
+}
