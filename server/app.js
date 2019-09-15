@@ -19,7 +19,7 @@ app.use(express.static(publicPath));
 app.use(express.urlencoded());
 app.use(express.json());
 
-http.listen(5000, () => {
+http.listen(3000, () => {
 	console.log(`Listening on port 3000 and looking in folder ${publicPath}`);
 });
 
