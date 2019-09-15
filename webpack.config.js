@@ -29,7 +29,15 @@ module.exports = {
             loader: 'css-loader',
           }
         ]
-      }
+      },
+      {
+        test: /\.(pdf|jpg|png|gif|svg|ico)$/i,
+        use: [
+          {
+            loader: 'url-loader'
+          },
+        ]
+      },
     ]
   },
   plugins: [
