@@ -23,7 +23,6 @@ class Home extends React.Component {
 				     <button className="record-button"><img src={RecordButton} onClick={this.myfunction} /></button>
 				  </form>
 				<Instruction/>
-				<Logo/>
 				<RecordContainer recordStart={this.state.recordStart}/>
 			</div>
 		);
