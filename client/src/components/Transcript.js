@@ -9,6 +9,7 @@ class Transcript extends React.Component {
 		super(props)
 		this.state = {
 			words: [],
+			selectedSentences: [],
 		}
 	}
 
@@ -18,7 +19,30 @@ class Transcript extends React.Component {
 	    this.setState({words: wordsList});
 	  };
 
+	handleClick = (i) => {
+		console.log(i);
+		let newSelectedSentences = this.state.selectedSentences.concat(this.props.transcript[i]);
+		this.setState({selectedSentences: newSelectedSentences})
+		console.log(this.state.selectedSentences);
+	};
+
 	render() {
+		let sentences = [];
+		console.log(this.state.words);
+		console.log(this.state.selectedSentences);
+		console.log(this.state.words.concat(this.state.selectedSentences));
+		for (var i = 0; i < this.props.transcript.length; i++) {
+			let sentence = this.props.transcript[i];
+
+			sentences.push(<div key={i}>
+				<button onClick={this.handleClick.bind(this, i)}>{i+1}</button>
+				<Highlighter
+				    searchWords={this.state.words.concat(this.state.selectedSentences)}
+				    autoEscape={true}
+				    textToHighlight={sentence}
+				  />
+				  </div>);
+		}
 		return (
 			<div className="transcript-container">
 				<input className="input-box" 
@@ -28,11 +52,7 @@ class Transcript extends React.Component {
 	                      onFocus={(e) => e.target.placeholder = ""} 
 	                      onBlur={(e) => e.target.placeholder = "Enter words"}/>
 				<div className="textbox">
-				  <Highlighter
-				    searchWords={this.state.words}
-				    autoEscape={true}
-				    textToHighlight={this.props.transcript}
-				  />
+				  {sentences}
 				</div>
 			</div>
 		);

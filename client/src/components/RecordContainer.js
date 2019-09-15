@@ -11,8 +11,8 @@ class RecordContainer extends React.Component {
 		super(props);
 
 		this.state = {
-			recordStatus: 0, //0 is recording, 1 is result, 2 is end
-			transcript: "1. The dog is chasing the cat. 2. Or perhaps they're just playing? 3. Where is the dog?",
+			recordStatus: 1, //0 is recording, 1 is result, 2 is end
+			transcript: ["The dog is chasing the cat.", "Or perhaps they're just playing?", "Where is the dog?"],
 		}
 	}
 
