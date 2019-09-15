@@ -12,7 +12,7 @@ class Result extends React.Component {
 			<div>
 				This is result.js
 				<div className="transcript-container">
-				<Transcript/>
+				<Transcript transcript={this.props.transcript}/>
 				</div>
 			</div>
 		);

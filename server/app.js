@@ -23,7 +23,8 @@ var in_progress = 0;
 app.get('/processText', async (request, response) => {
 	var jsonObject = JSON.parse(body);
 	var path = __dirname.concat("/audio/", jsonObject.title, ".mp3");
-	if (var in_progress == 0) {
+	let in_progress = 0;
+	if (in_progress == 0) {
 		var job = await client.submitJobLocalFile(path);
 		in_progress = 1;
 		// "/Users/Sayan/Desktop/hackmit19/hackmit19/server/audio/test_file.mp3"
@@ -44,6 +45,7 @@ app.get('/getText', async (request, response) => {
 })
 
 app.get('/record', (request, response) => {
+	response.send("record triggered");
 })
 
 
