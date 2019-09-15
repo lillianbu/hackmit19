@@ -10,7 +10,6 @@ class Result extends React.Component {
 	render() {
 		return (
 			<div className="transcript-container">
-				This is result.js
 				<div className="transcript-container">
 				<Transcript transcript={this.props.transcript}/>
 				</div>

@@ -24,9 +24,9 @@ class Home extends React.Component {
 		return (
 			<div>
 			<Navbar/>
-				<div className="home-container">
-					     Meeting Title: <input type="text" name="title" className="form-border" />
-					     <button className="record-button"><img src={RecordButton} onClick={this.navigate} /></button>
+				<div className="home-container pad">
+				     Meeting Title: <input type="text body" name="title" className="form-border"/>
+				     <button className="record-button"><img src={RecordButton} onClick={this.navigate} /></button>
 					<Instruction/>
 					<RecordContainer recordStart={this.state.recordStart}/>
 				</div>
