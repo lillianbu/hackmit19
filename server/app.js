@@ -32,9 +32,9 @@ var fileTitle;
 
 app.get('/getText', async (request, response) => {
 	var jobs = await client.getListOfJobs();
-	var jobDetails = await client.getJobDetails(jobs[3].id);
+	var jobDetails = await client.getJobDetails(jobs[0].id);
 	console.log(jobs);
-	console.log(jobs[3].id);
+	console.log(jobs[0].id);
 	if (jobDetails.status != "transcribed") { 
 		response.send('Currently transcribing.');
 	} else {
@@ -48,7 +48,7 @@ app.post('/record', async (request, response) => {
 	const title = request.body.title;
 	fileTitle = title;
 	musicPath = __dirname.concat("/audio/", title, ".mp3");
-	var job = await client.submitJobLocalFile(musicPath);
+	// var job = await client.submitJobLocalFile(musicPath);
 	console.log(title);
 })
 
