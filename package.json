@@ -20,7 +20,7 @@
     "connect-ensure-login": "^0.1.1",
     "dotenv": "^6.2.0",
     "es6-promise": "^4.2.5",
-    "express": "^4.16.4",
+    "express": "^4.17.3",
     "express-session": "^1.15.6",
     "file-loader": "^4.2.0",
     "getusermedia": "^2.0.1",
